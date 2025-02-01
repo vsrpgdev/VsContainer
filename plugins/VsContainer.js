@@ -242,7 +242,7 @@
     static get PluginName () {return pluginName}
     
     /**  @type {[number,number,number]} */
-    static get Version () {return [1,2, 0]}
+    static get Version () {return [1,1, 0]}
   }
 
 })();
