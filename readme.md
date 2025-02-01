@@ -1,5 +1,5 @@
 # RPG Maker MZ - VsContainer Plugin
-Version: 1.0.0
+Version: 1.1.0
 
 1. [Installation](#1-installation)
 1. [Configuration](#2-configuration)

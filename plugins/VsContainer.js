@@ -1,10 +1,15 @@
 /*:
  * @target MZ
- * @plugindesc Version 1.0.0 Empty Container
+ * @plugindesc Version 1.1.0 Empty Container
  * @author VsRpgDev
  * @url https://github.com/vsrpgdev/VsContainer
  * @help presents a class with the same methods as sprite but instead of pixi.Sprite extends pixi.Container
  */
+
+//@ts-ignore ---------------- Header line for all VsRpgDev Plugins, create the global VsRpgDev object -------------
+"undefined"==typeof Vs&&(Vs={get author(){return"VsRpgDev"}, get isVsRpgDev(){return"VsRpgDev"==Vs.author}, plugins:{}, c(m,...p){ p.filter(x => { const v=x.split("."); const found = Object.entries(Vs.plugins).some(p => p[1].PluginName == v[0] && (v.length < 2 || v[1]==p[1].Version[0])&& (v.length < 3 || v[2]<=p[1].Version[1]));    return !found;   }).forEach(e => {throw new Error(`${m} Error: plugin '${e}' not found or wrong version`)}); } });
+
+
 
 (() => {
   const pluginName = "VsContainer";
@@ -230,5 +235,14 @@
   // @ts-ignore
   })();
 
+  
+  Vs.plugins.VsContainerPlugin = class {
+    static VsContainer = window.VsContainer
+
+    static get PluginName () {return pluginName}
+    
+    /**  @type {[number,number,number]} */
+    static get Version () {return [1,2, 0]}
+  }
 
 })();
